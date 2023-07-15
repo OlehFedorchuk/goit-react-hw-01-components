@@ -1,16 +1,18 @@
-export const App = () => {
+import friends from "./data/friends.json";
+import FriendList from "./components/FriendList";
+import { Fragment } from "react";
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Fragment>
+      {friends.map((friend) => (
+        <FriendList
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+          key={friend.id}
+        />
+      ))}
+    </Fragment>
   );
 };
