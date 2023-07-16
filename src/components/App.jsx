@@ -13,6 +13,8 @@ import TransactionHistoryTable from './TransactionHistory/TransactionHistoryTabl
 
 import { Fragment } from "react";
 
+
+
 export default function App() {
   return (
     <Fragment>
@@ -27,7 +29,7 @@ export default function App() {
       />
 
         <Statistics
-        title="Upload stats" stats={data}
+        title="UPLOAD STATS" stats={data}
       />
 
       

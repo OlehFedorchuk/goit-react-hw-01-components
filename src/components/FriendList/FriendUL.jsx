@@ -1,5 +1,7 @@
 import FriendList from "./FriendList";
 import PropTypes from "prop-types";
+
+
 export default function FriendUL({ items }) {
     return (<ul className="friend-list">
         {items.map(item => (
