@@ -7,8 +7,9 @@ import user from "./data/user.json";
 import Statistics from "./Statistics";
 import data from '../components/data/data.json';
 
-import TransactionHistory from '../components/TransactionHistory';
 import transactions from './data/transactions.json';
+import TransactionHistoryTable from '../components/TransactionHistoryTable';
+
 
 import { Fragment } from "react";
 
@@ -37,16 +38,9 @@ export default function App() {
         statsD={data}
         
       />
-
-        {transactions.map((transaction) =>(
-          <TransactionHistory
-      
-           key={transaction.id}
-           type={transaction.type}
-           amount={transaction.amount}
-           currency={transaction.currency}
-            />  
-          ))}
+      <>
+        <TransactionHistoryTable items={transactions} />
+      </>
     </Fragment>
   );
 };
