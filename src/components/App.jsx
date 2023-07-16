@@ -1,14 +1,14 @@
-import FriendUL from "../components/FriendUL";
+import FriendUL from "./FriendList/FriendUL";
 import friends from "./data/friends.json";
 
-import Profile from "../components/Profile";
+import Profile from "./Profile/Profile";
 import user from "./data/user.json";
 
-import Statistics from "./Statistics";
+import Statistics from "./Statistics/Statistics";
 import data from '../components/data/data.json';
 
 import transactions from './data/transactions.json';
-import TransactionHistoryTable from '../components/TransactionHistoryTable';
+import TransactionHistoryTable from './TransactionHistory/TransactionHistoryTable';
 
 
 import { Fragment } from "react";
