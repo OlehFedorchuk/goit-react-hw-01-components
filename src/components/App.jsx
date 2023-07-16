@@ -1,4 +1,4 @@
-import FriendList from "../components/FriendList";
+import FriendUL from "../components/FriendUL";
 import friends from "./data/friends.json";
 
 import Profile from "../components/Profile";
@@ -16,31 +16,23 @@ import { Fragment } from "react";
 export default function App() {
   return (
     <Fragment>
-
-      {friends.map((friend) => (
-        <FriendList
-          avatar={friend.avatar}
-          name={friend.name}
-          isOnline={friend.isOnline}
-          key={friend.id}
-        />
-      ))}
+        <FriendUL items={friends} />
+    
         <Profile
           username={user.username}
           tag={user.tag}
           location={user.location}
           avatar={user.avatar}
           stats={user.stats}
-
       />
+
         <Statistics
         title="Upload stats" stats={data}
-        statsD={data}
-        
       />
-      <>
+
+      
         <TransactionHistoryTable items={transactions} />
-      </>
+      
     </Fragment>
   );
 };

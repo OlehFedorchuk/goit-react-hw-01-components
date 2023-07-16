@@ -1,5 +1,3 @@
-// import PropTypes from "prop-types";
-
 export default function FriendList({ avatar, name, isOnline, id }) {
   return (
     <li key={id} className="item">
@@ -10,9 +8,4 @@ export default function FriendList({ avatar, name, isOnline, id }) {
   );
 }
 
-// Friends.propTypes = {
-//   isOnline: PropTypes.bool,
-//   avatar: PropTypes.string,
-//   name: PropTypes.string,
-//   id: PropTypes.number,
-// };
+
